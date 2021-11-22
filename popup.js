@@ -1,5 +1,5 @@
 // Initialize butotn with users's prefered color
-let langDiv = document.getElementById("langDiv");
+const langDiv = document.getElementById("langDiv");
 const reg = /lr=((?!&)[A-Za-z0-9_-])+/;
 
 async function getCurrentTab() {
@@ -17,3 +17,19 @@ langDiv.addEventListener("click", async (e) => {
 
   chrome.tabs.update(id, { url: target });
 });
+
+
+function renderSelectItem() {
+  chrome.storage.sync.get('language', ({language}) => {
+    const fg = document.createDocumentFragment()
+    for(let item of language) {
+      const oItem = document.createElement('div')
+      oItem.id = item
+      fg.append(oItem)
+    }
+
+    langDiv.append(fg)
+  })
+}
+
+renderSelectItem()

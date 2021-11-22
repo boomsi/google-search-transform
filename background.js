@@ -1,8 +1,6 @@
-let color = '#3aa757';
-let language = 'Default'
+let language = []
 
-// chrome.runtime.onInstalled.addListener(() => {
-//   chrome.storage.sync.set({ color, language });
-//   console.log('Default background color set to %cgreen', `color: ${color}`);
-// });
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.storage.sync.set({ language });
+});
 

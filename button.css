@@ -1,3 +1,38 @@
+.tips {
+  padding-left: 40px;
+  font-size: 18px;
+}
+
+#radioDiv ul {
+  list-style: none;
+}
+
+#radioDiv ul li {
+  display: inline-block;
+  border: 1px solid #1890ff;
+  padding: 8px 12px;
+  margin: 0 8px 8px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#radioDiv ul li input,
+#radioDiv ul li label {
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#radioDiv ul li:hover {
+  background-color: #40a9ff;
+  color: #fff;
+}
+
+#radioDiv ul li.checked {
+  background-color: #096dd9 !important;
+  color: #fff;
+}
+
 #langDiv {
   display: flex;
   cursor: pointer;
@@ -5,15 +40,17 @@
   border: 1px solid #1890ff;
 }
 
+#radioDiv ul li:hover,
 #langDiv :hover {
   background-color: #40a9ff;
-  color: #FFF;
+  color: #fff;
 }
 
 #langDiv :active {
   background-color: #096dd9;
-  color: #FFF;
+  color: #fff;
 }
+
 #langDiv div {
   padding: 4px 8px;
 }
