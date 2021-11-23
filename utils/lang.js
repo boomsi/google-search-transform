@@ -1,190 +1,284 @@
 const LIST = [
   {
-    "text": "任何语言",
-    "value": "all"
+    text: "任何语言",
+    key: 1,
+    value: "all",
+    text_en: "Any language",
   },
   {
-    "text": "阿拉伯语",
-    "value": "lang_ar"
+    text: "阿拉伯语",
+    key: 2,
+    value: "lang_ar",
+    text_en: "Arabic",
   },
   {
-    "text": "爱沙尼亚语",
-    "value": "lang_et"
+    text: "爱沙尼亚语",
+    key: 3,
+    value: "lang_et",
+    text_en: "Estonian",
   },
   {
-    "text": "白俄罗斯语",
-    "value": "lang_be"
+    text: "白俄罗斯语",
+    key: 4,
+    value: "lang_be",
+    text_en: "Belarusian",
   },
   {
-    "text": "保加利亚语",
-    "value": "lang_bg"
+    text: "保加利亚语",
+    key: 5,
+    value: "lang_bg",
+    text_en: "Bulgarian",
   },
   {
-    "text": "冰岛语",
-    "value": "lang_is"
+    text: "冰岛语",
+    key: 6,
+    value: "lang_is",
+    text_en: "Icelandic",
   },
   {
-    "text": "波兰语",
-    "value": "lang_pl"
+    text: "波兰语",
+    key: 7,
+    value: "lang_pl",
+    text_en: "Polish",
   },
   {
-    "text": "波斯语",
-    "value": "lang_fa"
+    text: "波斯语",
+    key: 8,
+    value: "lang_fa",
+    text_en: "Persian",
   },
   {
-    "text": "丹麦语",
-    "value": "lang_da"
+    text: "丹麦语",
+    key: 9,
+    value: "lang_da",
+    text_en: "Danish",
   },
   {
-    "text": "德语",
-    "value": "lang_de"
+    text: "德语",
+    key: 10,
+    value: "lang_de",
+    text_en: "German",
   },
   {
-    "text": "俄语",
-    "value": "lang_ru"
+    text: "俄语",
+    key: 11,
+    value: "lang_ru",
+    text_en: "Russian",
   },
   {
-    "text": "法语",
-    "value": "lang_fr"
+    text: "法语",
+    key: 12,
+    value: "lang_fr",
+    text_en: "French",
   },
   {
-    "text": "繁体中文",
-    "value": "lang_zh-TW"
+    text: "繁体中文",
+    key: 13,
+    value: "lang_zh-TW",
+    text_en: "Traditional Chinese",
   },
   {
-    "text": "菲律宾语",
-    "value": "lang_tl"
+    text: "菲律宾语",
+    key: 14,
+    value: "lang_tl",
+    text_en: "Filipino",
   },
   {
-    "text": "芬兰语",
-    "value": "lang_fi"
+    text: "芬兰语",
+    key: 15,
+    value: "lang_fi",
+    text_en: "Finnish",
   },
   {
-    "text": "韩语",
-    "value": "lang_ko"
+    text: "韩语",
+    key: 16,
+    value: "lang_ko",
+    text_en: "Korean",
   },
   {
-    "text": "荷兰语",
-    "value": "lang_nl"
+    text: "荷兰语",
+    key: 17,
+    value: "lang_nl",
+    text_en: "Dutch",
   },
   {
-    "text": "加泰罗尼亚语",
-    "value": "lang_ca"
+    text: "加泰罗尼亚语",
+    key: 18,
+    value: "lang_ca",
+    text_en: "Catalan",
   },
   {
-    "text": "简体中文",
-    "value": "lang_zh-CN"
+    text: "简体中文",
+    key: 19,
+    value: "lang_zh-CN",
+    text_en: "Simplified Chinese",
   },
   {
-    "text": "捷克语",
-    "value": "lang_cs"
+    text: "捷克语",
+    key: 20,
+    value: "lang_cs",
+    text_en: "Czech",
   },
   {
-    "text": "克罗地亚语",
-    "value": "lang_hr"
+    text: "克罗地亚语",
+    key: 21,
+    value: "lang_hr",
+    text_en: "Croatian",
   },
   {
-    "text": "拉脱维亚语",
-    "value": "lang_lv"
+    text: "拉脱维亚语",
+    key: 22,
+    value: "lang_lv",
+    text_en: "Latvian",
   },
   {
-    "text": "立陶宛语",
-    "value": "lang_lt"
+    text: "立陶宛语",
+    key: 23,
+    value: "lang_lt",
+    text_en: "Lithuanian",
   },
   {
-    "text": "罗马尼亚语",
-    "value": "lang_ro"
+    text: "罗马尼亚语",
+    key: 24,
+    value: "lang_ro",
+    text_en: "Romanian",
   },
   {
-    "text": "南非荷兰语",
-    "value": "lang_af"
+    text: "南非荷兰语",
+    key: 25,
+    value: "lang_af",
+    text_en: "Afrikaans",
   },
   {
-    "text": "挪威语",
-    "value": "lang_no"
+    text: "挪威语",
+    key: 26,
+    value: "lang_no",
+    text_en: "Norwegian",
   },
   {
-    "text": "葡萄牙语",
-    "value": "lang_pt"
+    text: "葡萄牙语",
+    key: 27,
+    value: "lang_pt",
+    text_en: "Portuguese",
   },
   {
-    "text": "日语",
-    "value": "lang_ja"
+    text: "日语",
+    key: 28,
+    value: "lang_ja",
+    text_en: "Japanese",
   },
   {
-    "text": "瑞典语",
-    "value": "lang_sv"
+    text: "瑞典语",
+    key: 29,
+    value: "lang_sv",
+    text_en: "Swedish",
   },
   {
-    "text": "塞尔维亚语",
-    "value": "lang_sr"
+    text: "塞尔维亚语",
+    key: 30,
+    value: "lang_sr",
+    text_en: "Serbian",
   },
   {
-    "text": "世界语",
-    "value": "lang_eo"
+    text: "世界语",
+    key: 31,
+    value: "lang_eo",
+    text_en: "Esperanto",
   },
   {
-    "text": "斯洛伐克语",
-    "value": "lang_sk"
+    text: "斯洛伐克语",
+    key: 32,
+    value: "lang_sk",
+    text_en: "Slovak",
   },
   {
-    "text": "斯洛文尼亚语",
-    "value": "lang_sl"
+    text: "斯洛文尼亚语",
+    key: 33,
+    value: "lang_sl",
+    text_en: "Slovenian",
   },
   {
-    "text": "斯瓦希里语",
-    "value": "lang_sw"
+    text: "斯瓦希里语",
+    key: 34,
+    value: "lang_sw",
+    text_en: "Swa Hili",
   },
   {
-    "text": "泰语",
-    "value": "lang_th"
+    text: "泰语",
+    key: 35,
+    value: "lang_th",
+    text_en: "Thai",
   },
   {
-    "text": "土耳其语",
-    "value": "lang_tr"
+    text: "土耳其语",
+    key: 36,
+    value: "lang_tr",
+    text_en: "Turkish",
   },
   {
-    "text": "乌克兰语",
-    "value": "lang_uk"
+    text: "乌克兰语",
+    key: 37,
+    value: "lang_uk",
+    text_en: "Ukrainian",
   },
   {
-    "text": "西班牙语",
-    "value": "lang_es"
+    text: "西班牙语",
+    key: 38,
+    value: "lang_es",
+    text_en: "Spanish",
   },
   {
-    "text": "希伯来语",
-    "value": "lang_iw"
+    text: "希伯来语",
+    key: 39,
+    value: "lang_iw",
+    text_en: "Hebrew",
   },
   {
-    "text": "希腊语",
-    "value": "lang_el"
+    text: "希腊语",
+    key: 40,
+    value: "lang_el",
+    text_en: "Greek",
   },
   {
-    "text": "匈牙利语",
-    "value": "lang_hu"
+    text: "匈牙利语",
+    key: 41,
+    value: "lang_hu",
+    text_en: "Hungarian",
   },
   {
-    "text": "亚美尼亚语",
-    "value": "lang_hy"
+    text: "亚美尼亚语",
+    key: 42,
+    value: "lang_hy",
+    text_en: "Armenian",
   },
   {
-    "text": "意大利语",
-    "value": "lang_it"
+    text: "意大利语",
+    key: 43,
+    value: "lang_it",
+    text_en: "Italian",
   },
   {
-    "text": "印第语",
-    "value": "lang_hi"
+    text: "印第语",
+    key: 44,
+    value: "lang_hi",
+    text_en: "Hindi",
   },
   {
-    "text": "印尼语",
-    "value": "lang_id"
+    text: "印尼语",
+    key: 45,
+    value: "lang_id",
+    text_en: "Indonesian",
   },
   {
-    "text": "英语",
-    "value": "lang_en"
+    text: "英语",
+    key: 46,
+    value: "lang_en",
+    text_en: "English",
   },
   {
-    "text": "越南语",
-    "value": "lang_vi"
-  }
-]
+    text: "越南语",
+    key: 47,
+    value: "lang_vi",
+    text_en: "Vietnamese",
+  },
+];
