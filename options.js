@@ -31,7 +31,7 @@ function constructOption() {
     for (let item of LIST) {
       const { text, text_en, value } = item;
       const oItem = document.createElement("li");
-      oItem.innerText = robitLanguage !== 'zh-CN' ? text : text_en;
+      oItem.innerText = robitLanguage === 'zh-CN' ? text : text_en;
       oItem.setAttribute("value", value);
       oItem.setAttribute("data-field", JSON.stringify(item));
       currentLang?.some((item) => item.value === value) &&

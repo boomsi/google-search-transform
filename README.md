@@ -4,7 +4,7 @@ Chrome extensions for filter google result by language.
 
 ### Snapshot
 
-![Alt Text]('./images/snapshot.gif')
+![Alt Text](./images/snapshot.gif)
 
 #### Support language
 

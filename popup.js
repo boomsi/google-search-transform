@@ -37,7 +37,7 @@ function renderSelectItem() {
 
     for (let item of target) {
       const oItem = document.createElement("div");
-      oItem.innerText = robitLanguage !== "zh-CN" ? item.text : item.text_en;
+      oItem.innerText = robitLanguage === "zh-CN" ? item.text : item.text_en;
       oItem.id = item.value;
       fg.append(oItem);
     }
