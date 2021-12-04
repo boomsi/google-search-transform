@@ -16,7 +16,12 @@ Chrome extensions for filter google result by language.
 
 ### 简体中文
 
-筛选 google 搜索结果（指定语言）
+快捷切换搜索引擎
+根据语言筛选 google 搜索结果
+
+#### 支持引擎
+
+`Baidu` | `Google`
 
 #### 支持语言
 

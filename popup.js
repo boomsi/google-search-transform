@@ -8,11 +8,25 @@ async function getCurrentTab() {
 }
 
 langDiv.addEventListener("click", async (e) => {
-  const lang = e.target.id !== "all" ? e.target.id : "";
+  const key = e.target.id !== "all" ? e.target.id : "";
+  const path = e.target.dataset?.path;
   const { id, url } = await getCurrentTab();
+
+  // engine
+  if (path) {
+    const { host } = new URL(url);
+    const detail = ENGINE.find((item) => host.includes(item.key));
+    const searchKey = url.match(detail.reg);
+    if (searchKey) {
+      chrome.tabs.update(id, { url: `${path}${searchKey[0]}` });
+      return;
+    }
+  }
+
+  // language
   const target = url.match(reg)
-    ? url.replace(reg, `lr=${lang}`)
-    : `${url}&lr=${lang}`;
+    ? url.replace(reg, `lr=${key}`)
+    : `${url}&lr=${key}`;
 
   chrome.tabs.update(id, { url: target });
 });
@@ -21,29 +35,33 @@ function renderSelectItem() {
   const robitLanguage = navigator.language;
 
   chrome.storage.sync.get("language", ({ language }) => {
-    if (!language.length) {
-      const oItem = document.createElement("span");
-      oItem.classList.add("empty-tips");
-      oItem.innerText =
-        robitLanguage === "zh-CN"
-          ? "请在选项中预设需要的语言"
-          : "Please select preset languages!";
-      document.body.append(oItem);
-      return;
-    }
-
     const fg = document.createDocumentFragment();
-    const target = language.sort((a, b) => a.key - b.key);
 
-    for (let item of target) {
-      const oItem = document.createElement("div");
-      oItem.innerText = robitLanguage === "zh-CN" ? item.text : item.text_en;
-      oItem.id = item.value;
-      fg.append(oItem);
-    }
+    insertLang(fg, language, robitLanguage);
+    insertEngine(fg);
 
     langDiv.append(fg);
   });
+}
+
+function insertLang(fg, language, robitLanguage) {
+  const target = language.sort((a, b) => a.key - b.key);
+  for (let item of target) {
+    const oItem = document.createElement("div");
+    oItem.innerText = robitLanguage === "zh-CN" ? item.text : item.text_en;
+    oItem.id = item.value;
+    fg.append(oItem);
+  }
+}
+
+function insertEngine(fg) {
+  for (let item of ENGINE) {
+    const oItem = document.createElement("div");
+    oItem.innerText = item.name;
+    oItem.id = item.key;
+    oItem.setAttribute("data-path", item.path);
+    fg.append(oItem);
+  }
 }
 
 renderSelectItem();
