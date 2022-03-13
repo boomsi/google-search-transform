@@ -38,6 +38,7 @@ function renderSelectItem() {
     const fg = document.createDocumentFragment();
 
     insertLang(fg, language, robitLanguage);
+    insertLine(fg)
     insertEngine(fg);
 
     langDiv.append(fg);
@@ -46,22 +47,34 @@ function renderSelectItem() {
 
 function insertLang(fg, language, robitLanguage) {
   const target = language.sort((a, b) => a.key - b.key);
+  const container = document.createElement("div");
+  container.classList.add('container')
   for (let item of target) {
     const oItem = document.createElement("div");
     oItem.innerText = robitLanguage === "zh-CN" ? item.text : item.text_en;
     oItem.id = item.value;
-    fg.append(oItem);
+    container.append(oItem)
   }
+  fg.append(container);
 }
 
 function insertEngine(fg) {
+  const container = document.createElement("div");
+  container.classList.add('container')
   for (let item of ENGINE) {
     const oItem = document.createElement("div");
     oItem.innerText = item.name;
     oItem.id = item.key;
     oItem.setAttribute("data-path", item.path);
-    fg.append(oItem);
+    container.append(oItem);
   }
+  fg.append(container)
+}
+
+function insertLine(fg) {
+  const oLine = document.createElement('span')
+  oLine.classList.add('line')
+  fg.append(oLine)
 }
 
 renderSelectItem();

@@ -1,6 +1,6 @@
 const LIST = [
   {
-    text: "任何语言",
+    text: "默认",
     key: 1,
     value: "all",
     text_en: "Any language",
